@@ -1,0 +1,159 @@
+{
+  "rules": {
+    "userPermissions": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+    },
+    "kategori": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+    },
+    "promos": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+    },
+    "transaksi": {
+      ".read": "auth != null",
+      "$id": {
+        ".write": "auth != null && (auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com' || (!data.exists() && newData.exists()))"
+      }
+    },
+    "driverWic": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+    },
+    "upaya": {
+      ".read": "auth != null",
+      "$id": {
+        ".write": "auth != null && (auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com' || (!data.exists() && newData.exists()))"
+      }
+    },
+    "upayaCategories": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+    },
+    "targets": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+    },
+    "pccrfm": {
+      ".read": "auth != null",
+      "$id": {
+        ".write": "auth != null && (auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com' || (!data.exists() && newData.exists()))"
+      }
+    },
+    "favoriteLinks": {
+      ".read": "auth != null",
+      "$id": {
+        ".write": "auth != null && (auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com' || (!data.exists() && newData.exists()))"
+      }
+    },
+    "birthdayRecords": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+    },
+    "calendarActivities": {
+      ".read": "auth != null",
+      "$id": {
+        ".write": "auth != null && (auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com' || (!data.exists() && newData.exists()))"
+      }
+    },
+    "waSetup": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+    },
+    "waTargets": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+    },
+    "waHistory": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "waCampaigns": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+    },
+    "waSetupCBG": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+    },
+    "waSetupsCBG": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+    },
+    "waTargetsCBG": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "waHistoryCBG": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "waCampaignsCBG": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+    },
+    "waBlacklist": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "staffCBG": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "userProfiles": {
+      "$uid": {
+        ".read": "auth != null && auth.uid == $uid",
+        ".write": "auth != null && auth.uid == $uid"
+      }
+    },
+    "bhfMembers": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+    },
+    "bhfGroups": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+    },
+    "bhfUpaya": {
+      ".read": "auth != null",
+      "$id": {
+        ".write": "auth != null"
+      }
+    },
+    "bhfIssues": {
+      ".read": "auth != null",
+      "$id": {
+        ".write": "auth != null"
+      }
+    },
+    "appDocs": {
+      ".read": "auth != null",
+      "$id": {
+        ".write": "auth != null && (auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com')"
+      }
+    },
+    "testLabs": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'",
+      "$id": {
+        ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+      }
+    },
+    "panels": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'",
+      "$id": {
+        ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+      }
+    },
+    "wshps": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'",
+      "$id": {
+        ".write": "auth != null && auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com'"
+      }
+    }
+  }
+}

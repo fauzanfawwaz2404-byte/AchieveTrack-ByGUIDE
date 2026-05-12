@@ -1,0 +1,139 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /userPermissions/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /kategori/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /promos/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /transaksi/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && (request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com' || (resource == null && request.resource != null));
+    }
+    match /driverWic/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /upaya/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && (request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com' || (resource == null && request.resource != null));
+    }
+    match /upayaCategories/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /targets/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /pccrfm/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && (request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com' || (resource == null && request.resource != null));
+    }
+    match /favoriteLinks/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && (request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com' || (resource == null && request.resource != null));
+    }
+    match /birthdayRecords/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /calendarActivities/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && (request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com' || (resource == null && request.resource != null));
+    }
+    match /waSetup/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /waTargets/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /waHistory/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+    }
+    match /waCampaigns/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /waSetupCBG/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /waSetupsCBG/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /waTargetsCBG/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+    }
+    match /waHistoryCBG/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+    }
+    match /waCampaignsCBG/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /waBlacklist/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+    }
+    match /staffCBG/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+    }
+    match /userProfiles/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if request.auth != null && request.auth.uid == uid;
+    }
+    match /bhfMembers/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /bhfGroups/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /bhfUpaya/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+    }
+    match /bhfIssues/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+    }
+    match /appDocs/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && (request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com');
+    }
+    match /testLabs/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /panels/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /wshps/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+    match /announcements/{id} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.token.email.toLowerCase() == 'fauzanfawwaz2404@gmail.com';
+    }
+  }
+}
+
+

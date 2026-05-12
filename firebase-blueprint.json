@@ -1,0 +1,61 @@
+{
+  "entities": {
+    "WABlacklist": {
+      "title": "WA Blacklist",
+      "description": "Patient/Contact blacklist for WhatsApp messaging",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "nama": { "type": "string" },
+        "phone": { "type": "string" },
+        "sisproId": { "type": "string" },
+        "reason": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["phone", "timestamp"]
+    },
+    "Announcement": {
+      "title": "Announcement",
+      "description": "Global announcement for all users",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "message": { "type": "string" },
+        "type": { "type": "string", "enum": ["info", "warning", "success"] },
+        "active": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "message", "active", "createdAt"]
+    },
+    "ActivityLog": {
+      "title": "Activity Log",
+      "description": "User activity tracking log",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "action": { "type": "string" },
+        "details": { "type": "string" },
+        "menuId": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "userName", "action", "timestamp"]
+    }
+  },
+  "firestore": {
+    "waBlacklist": {
+      "schema": "WABlacklist",
+      "description": "Global blacklist for WhatsApp messages"
+    },
+    "announcements": {
+      "schema": "Announcement",
+      "description": "Global announcements table"
+    },
+    "activity_logs": {
+      "schema": "ActivityLog",
+      "description": "Table for tracking user actions and navigation"
+    }
+  }
+}
